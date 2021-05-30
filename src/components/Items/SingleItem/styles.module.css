@@ -1,0 +1,33 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 0.5px solid var(--border-item);
+  font-size: 1rem;
+  padding: 0.5rem;
+  width: 600px;
+}
+
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.2rem;
+}
+
+.name {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.description {
+  font-style: italic;
+  font-size: 0.9rem;
+  margin-top: 0.2rem;
+}
+
+.price {
+  color: var(--price);
+  font-weight: 500;
+  margin-top: 0.2rem;
+}

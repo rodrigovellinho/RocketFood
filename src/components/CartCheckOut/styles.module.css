@@ -1,0 +1,88 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0.9;
+}
+
+.title {
+  font-size: 2.2rem;
+  font-style: italic;
+  margin-top: 1rem;
+  font-weight: 500;
+}
+
+.cartContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.5rem;
+  margin-left: -22rem;
+}
+
+.establishment {
+  font-size: 1rem;
+  font-weight: 500;
+  font-style: italic;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 1rem;
+}
+
+.timer {
+  font-size: 1rem;
+}
+
+.cartSummary {
+  margin-top: 1rem;
+}
+
+.cartSummary span {
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-left: -17rem;
+}
+
+.btnContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 450px;
+}
+
+.button {
+  padding: 0.6rem;
+  font: inherit;
+  cursor: pointer;
+  background-color: var(--submit-btn);
+  border: none;
+  color: var(--white);
+  border-radius: 5px;
+  font-weight: 500;
+  transition: all 0.2 ease;
+  margin-bottom: 2rem;
+}
+
+.button:hover {
+  opacity: 0.9;
+}
+
+.buttonMenu {
+  padding: 0.6rem;
+  font: inherit;
+  cursor: pointer;
+  background-color: var(--menu-btn);
+  border: none;
+  color: var(--white);
+  border-radius: 5px;
+  font-weight: 500;
+  transition: all 0.2 ease;
+  margin-bottom: 2rem;
+}
+
+.buttonMenu:hover {
+  opacity: 0.9;
+}

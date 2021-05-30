@@ -1,0 +1,14 @@
+.container {
+  border: none;
+  background-color: var(--checkout-cartbtn);
+  color: white;
+  padding: 0.75rem 1rem;
+  border-radius: 28px;
+  font-weight: bold;
+  border: 1px solid var(--white);
+}
+
+.icon {
+  width: 1.35rem;
+  height: 1.35rem;
+}

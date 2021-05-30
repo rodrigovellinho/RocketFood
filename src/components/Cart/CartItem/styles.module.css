@@ -1,0 +1,71 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.05rem;
+  background-color: var(--background-menu);
+  padding: 0.3rem 0.4rem;
+  border-bottom: 0.5px solid var(--border-item);
+  width: 550px;
+  margin-left: -2.5rem;
+}
+
+.container:first-child {
+  margin-top: -1rem;
+}
+
+.namePosition {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.btnContainer {
+  font-style: normal;
+}
+
+.buttonAdd {
+  padding: 0.2rem 0.4rem;
+  border-radius: 40%;
+  background-color: var(--add-btn);
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--white);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-left: 0.5rem;
+}
+
+.buttonAdd:hover {
+  opacity: 0.9;
+}
+
+.buttonRemove {
+  padding: 0.2rem 0.5rem;
+  border-radius: 40%;
+  background-color: var(--remove-btn);
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--white);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-right: 0.5rem;
+}
+
+.buttonRemove:hover {
+  opacity: 0.9;
+}
+
+.description {
+  margin-left: 1rem;
+}
+
+.price {
+  margin-left: 1rem;
+  font-style: normal;
+  font-weight: 500;
+}

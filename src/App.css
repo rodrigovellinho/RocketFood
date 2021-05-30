@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap");
+
+:root {
+  --background: #fcf6bd;
+  --header: #1a535c;
+  --white: #fff;
+  --header-button: #f28f3b;
+  --border-item: #264653;
+  --background-menu: #f8f9fa;
+  --price: #f3722c;
+  --add-button: #264653;
+  --input-border: #264653;
+  --checkout-cartbtn: #264653;
+  --submit-btn: #f3722c;
+  --add-btn: #55a630;
+  --remove-btn: #e71d36;
+  --menu-btn: #264653;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: var(--background);
+}

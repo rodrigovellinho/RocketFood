@@ -1,0 +1,32 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.button {
+  cursor: pointer;
+  font: inherit;
+  background-color: var(--header-button);
+  color: white;
+  padding: 0.75rem 1rem;
+  border-radius: 25px;
+  font-weight: bold;
+  border: 1px solid var(--white);
+  transition: all 0.5s ease;
+}
+
+.button:hover {
+  opacity: 0.8;
+}
+
+.icon {
+  width: 1.35rem;
+  height: 1.35rem;
+}
+
+.title {
+  color: var(--white);
+  margin-top: 0.3rem;
+}
