@@ -30,3 +30,23 @@
   color: var(--white);
   margin-top: 0.3rem;
 }
+
+.cartContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.badge {
+  font: inherit;
+  background-color: var(--header-button);
+  color: white;
+  border-radius: 25px;
+  font-weight: 500;
+  border: 1px solid var(--white);
+  padding: 0.25rem 0.5rem;
+  border-radius: 25px;
+  margin-left: 0.5rem;
+}

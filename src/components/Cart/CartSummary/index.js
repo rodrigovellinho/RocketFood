@@ -1,18 +1,31 @@
-import React from "react";
+import React, { useContext } from "react";
 import CartItem from "../CartItem";
-import Products from "../../../utilities/Products";
 import styles from "./styles.module.css";
+import CartContext from "../../../hooks/CartContext";
 
 function CartSummary() {
+  const cartCtx = useContext(CartContext);
+  const totalAmount = `${cartCtx.totalAmount.toFixed(2)}`;
+
+  const cartItemRemoveHandler = (id) => {
+    cartCtx.removeItem(id);
+  };
+
+  const cartItemAddHandler = (item) => {
+    cartCtx.addItem({ ...item, amount: 1 });
+  };
+
   const cartItems = (
     <ul className={styles.listContainer}>
-      {Products.map((product) => (
+      {cartCtx.items.map((item) => (
         <CartItem
-          key={product.id}
-          name={product.name}
-          description={product.description}
-          /* amount={product.amount} */
-          price={product.price}
+          key={item.id}
+          name={item.name}
+          description={item.description}
+          amount={item.amount}
+          price={item.price}
+          onRemove={cartItemRemoveHandler.bind(null, item.id)}
+          onAdd={cartItemAddHandler.bind(null, item)}
         />
       ))}
     </ul>
@@ -23,7 +36,7 @@ function CartSummary() {
       <div>{cartItems}</div>
       <div className={styles.totalContainer}>
         <span>Valor Total</span>
-        <span>R$ XX,XX</span>
+        <span>R$ {totalAmount}</span>
       </div>
     </div>
   );

@@ -4,11 +4,21 @@ import CartCheckOut from "../CartCheckOut";
 import CartSucced from "../Cart/CartSucced";
 
 function CheckOut() {
+  const [cartIsShown, setCartIsShown] = useState(false);
+
+  const showCartHandler = () => {
+    setCartIsShown(true);
+  };
+
+  const hideCartHandler = () => {
+    setCartIsShown(false);
+  };
+
   return (
     <div>
-      {/*  {modalIsShown && <CartCheckOut onClose={hideModalHandler} />} */}
+      {cartIsShown && <CartSucced onClose={hideCartHandler} />}
       <Header />
-      <CartCheckOut />
+      <CartCheckOut onShow={showCartHandler} />
     </div>
   );
 }

@@ -10,6 +10,8 @@ function Menu() {
     </option>
   ));
 
+  console.log(selectCategories);
+
   return (
     <div className={styles.container}>
       <div className={styles.selectedCategories}>

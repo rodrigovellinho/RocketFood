@@ -1,25 +1,30 @@
-import React from "react";
+import React, { useContext } from "react";
+import CartContext from "../../../hooks/CartContext";
 import SingleItemForm from "../SingleItemForm";
 import styles from "./styles.module.css";
 
 function SingleItem(props) {
-  function numberFormat(number) {
-    if (!number) return null;
-    return new Intl.NumberFormat("pt-br", {
-      style: "decimal",
-      maximumFractionDigits: 2,
-    }).format(number);
-  }
+  const cartCtx = useContext(CartContext);
+  const price = props.price.toFixed(2);
+
+  const addToCartHandler = (amount) => {
+    cartCtx.addItem({
+      id: props.id,
+      name: props.name,
+      amount: amount,
+      price: props.price,
+    });
+  };
 
   return (
     <div className={styles.container}>
       <div className={styles.infoContainer}>
         <span className={styles.name}>{props.name}</span>
         <span className={styles.description}>{props.description}</span>
-        <span className={styles.price}>R$ {numberFormat(props.price)}</span>
+        <span className={styles.price}>R$ {price}</span>
       </div>
       <div className={styles.itemForm}>
-        <SingleItemForm />
+        <SingleItemForm onAddToCart={addToCartHandler} />
       </div>
     </div>
   );

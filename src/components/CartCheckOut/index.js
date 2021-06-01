@@ -1,11 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import Timer from "../Timer";
 import CheckOutCartButton from "../Layout/CheckOutCartButton";
 import CartSummary from "../Cart/CartSummary";
 import styles from "./styles.module.css";
+import CartContext from "../../hooks/CartContext";
 
 function CartCheckOut(props) {
+  const cartCtx = useContext(CartContext);
+  const hasItems = cartCtx.items.length > 0;
+
   return (
     <div className={styles.container}>
       <span className={styles.title}>Finalizar Pedido</span>
@@ -31,9 +35,15 @@ function CartCheckOut(props) {
             Voltar ao menu
           </button>
         </Link>
-        <button className={styles.button} type="submit">
-          Finalizar compra
-        </button>
+        {hasItems && (
+          <button
+            className={styles.button}
+            type="submit"
+            onClick={props.onShow}
+          >
+            Finalizar compra
+          </button>
+        )}
       </div>
     </div>
   );

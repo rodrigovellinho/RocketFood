@@ -6,6 +6,8 @@ import styles from "./styles.module.css";
 function MenuItems() {
   const productsList = products.map((product) => (
     <SingleItem
+      key={product.id}
+      id={product.id}
       name={product.name}
       description={product.description}
       price={product.price}

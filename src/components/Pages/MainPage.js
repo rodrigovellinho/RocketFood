@@ -5,7 +5,7 @@ import Menu from "../Items/Menu";
 function MainPage() {
   return (
     <div>
-      <Header /* onShowModal={showModalHandler} */ />
+      <Header />
       <Menu />
     </div>
   );

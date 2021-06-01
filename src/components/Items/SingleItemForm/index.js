@@ -1,11 +1,27 @@
-import React, { useRef } from "react";
+import React, { useState, useRef } from "react";
 import Input from "../../UI/Input";
 import styles from "./styles.module.css";
 
-function SingleItemForm() {
+function SingleItemForm(props) {
+  const [amountIsValid, setAmountIsValid] = useState(true);
+
   const amountInputRef = useRef();
+
+  const submitHandler = (event) => {
+    event.preventDefault();
+
+    const enteredAmount = amountInputRef.current.value;
+    const enteredAmountNumber = +enteredAmount;
+
+    if (enteredAmount.trim().length === 0 || enteredAmountNumber < 1) {
+      setAmountIsValid(false);
+      return;
+    }
+
+    props.onAddToCart(enteredAmountNumber);
+  };
   return (
-    <form className={styles.container}>
+    <form className={styles.container} onSubmit={submitHandler}>
       <Input
         label="Quantidade"
         ref={amountInputRef}
@@ -19,6 +35,7 @@ function SingleItemForm() {
         }}
       />
       <button className={styles.button}>Adicionar</button>
+      {!amountIsValid && <p>Entre com um valor válido</p>}
     </form>
   );
 }
