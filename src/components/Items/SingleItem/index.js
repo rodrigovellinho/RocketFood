@@ -11,6 +11,7 @@ function SingleItem(props) {
     cartCtx.addItem({
       id: props.id,
       name: props.name,
+      description: props.description,
       amount: amount,
       price: props.price,
     });

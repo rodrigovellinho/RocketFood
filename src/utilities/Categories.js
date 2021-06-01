@@ -5,19 +5,15 @@ const Categories = [
   },
   {
     id: 1,
-    name: "Doces",
+    name: "Alimentos",
   },
   {
     id: 2,
-    name: "Salgados",
+    name: "Hortifruti",
   },
   {
     id: 3,
-    name: "Hamburguer",
-  },
-  {
-    id: 4,
-    name: "Cervejas",
+    name: "Higiene",
   },
 ];
 

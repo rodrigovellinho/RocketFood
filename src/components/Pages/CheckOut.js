@@ -9,7 +9,6 @@ function CheckOut() {
   const showCartHandler = () => {
     setCartIsShown(true);
   };
-
   const hideCartHandler = () => {
     setCartIsShown(false);
   };

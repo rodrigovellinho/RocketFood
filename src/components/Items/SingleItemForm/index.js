@@ -20,6 +20,7 @@ function SingleItemForm(props) {
 
     props.onAddToCart(enteredAmountNumber);
   };
+
   return (
     <form className={styles.container} onSubmit={submitHandler}>
       <Input

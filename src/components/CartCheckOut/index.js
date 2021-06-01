@@ -25,10 +25,12 @@ function CartCheckOut(props) {
         </div>
       </div>
       <div className={styles.cartSummary}>
-        <span>Revise seus items</span>
+        {hasItems && <span>Revise seus items</span>}
+      </div>
+      <div className={styles.cartReturn}>
+        {!hasItems && <span>Volte ao menu de compras!!</span>}
       </div>
       <CartSummary />
-
       <div className={styles.btnContainer}>
         <Link to="/">
           <button className={styles.buttonMenu} type="button">

@@ -15,6 +15,9 @@
   --add-btn: #55a630;
   --remove-btn: #e71d36;
   --menu-btn: #264653;
+  --pagination-btn: #f3722c;
+  --pagination-background: #264653;
+  --return-msg: #264653;
 }
 
 * {

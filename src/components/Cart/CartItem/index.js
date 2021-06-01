@@ -2,7 +2,6 @@ import React from "react";
 import styles from "./styles.module.css";
 
 function CartItem(props) {
-  const price = props.price.toFixed(2);
   const totalAmount = (props.price * props.amount).toFixed(2);
   return (
     <li className={styles.container}>
@@ -17,7 +16,7 @@ function CartItem(props) {
           </button>
         </div>
         <div className={styles.description}>
-          <span>{props.name}</span>
+          <span>{props.description}</span>
         </div>
       </div>
       <div className={styles.price}>R$ {totalAmount}</div>

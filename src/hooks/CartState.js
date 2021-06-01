@@ -87,7 +87,8 @@ const CartProvider = (props) => {
     removeItem: removeItemFromCartHandler,
     resetCart: resetCartHandler,
   };
-  console.log(cartContext);
+
+  console.log(CartContext.counter);
 
   return (
     <CartContext.Provider value={cartContext}>

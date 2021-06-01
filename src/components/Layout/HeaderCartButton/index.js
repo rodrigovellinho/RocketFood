@@ -11,15 +11,27 @@ function HeaderCartButton() {
     return curNumber + item.amount;
   }, 0);
 
+  const cartHasItems = (
+    <Link to="/checkout">
+      <button className={styles.button}>
+        <div className={styles.icon}>
+          <CartIcon />
+        </div>
+      </button>
+    </Link>
+  );
+
+  const cartNoItems = (
+    <button className={styles.button}>
+      <div className={styles.icon}>
+        <CartIcon />
+      </div>
+    </button>
+  );
+
   return (
     <div className={styles.container}>
-      <Link to="/checkout">
-        <button className={styles.button}>
-          <div className={styles.icon}>
-            <CartIcon />
-          </div>
-        </button>
-      </Link>
+      {cartCtx.items.length > 0 ? cartHasItems : cartNoItems}
 
       <div className={styles.cartContainer}>
         <span className={styles.title}>Seu carrinho</span>

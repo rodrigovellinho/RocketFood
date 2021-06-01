@@ -3,7 +3,7 @@ import CartItem from "../CartItem";
 import styles from "./styles.module.css";
 import CartContext from "../../../hooks/CartContext";
 
-function CartSummary() {
+function CartSummary(props) {
   const cartCtx = useContext(CartContext);
   const totalAmount = `${cartCtx.totalAmount.toFixed(2)}`;
 
@@ -31,7 +31,7 @@ function CartSummary() {
     </ul>
   );
 
-  return (
+  const cartHasItems = (
     <div className={styles.container}>
       <div>{cartItems}</div>
       <div className={styles.totalContainer}>
@@ -40,6 +40,8 @@ function CartSummary() {
       </div>
     </div>
   );
+
+  return <div>{cartCtx.items.length ? cartHasItems : ""}</div>;
 }
 
 export default CartSummary;

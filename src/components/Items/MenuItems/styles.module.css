@@ -6,3 +6,34 @@
   margin-bottom: 2rem;
   width: 100%;
 }
+
+.paginationBtn {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.paginationBtn a {
+  padding: 0.4rem;
+  margin: 0.4rem;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--pagination-background);
+  color: var(--white);
+  cursor: pointer;
+}
+
+.paginationBtn a:hover {
+  opacity: 0.9;
+}
+
+.paginationActive a {
+  background-color: var(--background-menu);
+  color: var(--pagination-btn);
+  font-weight: 700;
+}
+
+.previousBtn,
+.nextBtn {
+  display: none;
+}
